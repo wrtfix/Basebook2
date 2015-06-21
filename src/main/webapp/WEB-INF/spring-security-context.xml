@@ -31,13 +31,18 @@
 
   <http auto-config='true'>
     <intercept-url pattern="/**" access="ROLE_USER" />
-    <form-login login-page='/login.jsp'/>
+    <form-login 
+		    login-page="/login.jsp" 
+		    default-target-url="/index.jsp" 
+			authentication-failure-url="/login.jsp?error" 
+			username-parameter="username"
+			password-parameter="password" />
+		<logout logout-success-url="/login.jsp?logout"  />
   </http>
   
 	
 	<authentication-manager>
 		<authentication-provider>
-			
 			<jdbc-user-service data-source-ref="dataSource" />
 		</authentication-provider>
 		
