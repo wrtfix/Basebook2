@@ -56,7 +56,7 @@
 	  	<div class="container">
 	  	
 		      <form class="form-login" name="loginForm" action="<c:url value='/j_spring_security_check' />" method='POST'>
-		        <h2 class="form-login-heading">sign in now</h2>
+		        <h2 class="form-login-heading">Ingresar</h2>
 		        <div class="login-wrap">
 		       	<c:if test="${not empty error}">
 					<div class="error">${error}</div>
@@ -64,12 +64,12 @@
 				<c:if test="${not empty msg}">
 					<div class="msg">${msg}</div>
 				</c:if>
-		            <input type="text" class="form-control" placeholder="User ID" autofocus name='username'>
+		            <input type="text" class="form-control" placeholder="Usuario" autofocus name='username'>
 		            <br>
-		            <input type="password" class="form-control" placeholder="Password" name='password'>
+		            <input type="password" class="form-control" placeholder="Clave" name='password'>
 		            <label class="checkbox">
 		                <span class="pull-right">
-		                    <a data-toggle="modal" href="login.html#myModal"> Forgot Password?</a>
+		                    <a data-toggle="modal" href="login.html#myModal"> Olvido su contraseña?</a>
 		
 		                </span>
 		            </label>
@@ -77,14 +77,14 @@
 		            <hr>
 		            
 		            <div class="login-social-link centered">
-		            <p>or you can sign in via your social network</p>
+		            <p>tambien puedes loguear con</p>
 		                <button class="btn btn-facebook" type="submit"><i class="fa fa-facebook"></i> Facebook</button>
 		                <button class="btn btn-twitter" type="submit"><i class="fa fa-twitter"></i> Twitter</button>
 		            </div>
 		            <div class="registration">
-		                Don't have an account yet?<br/>
+		                No tenes una cuenta aun?<br/>
 		                <a class="" href="#">
-		                    Create an account
+		                    Registrate
 		                </a>
 		            </div>
 		
