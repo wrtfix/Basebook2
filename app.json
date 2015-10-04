@@ -1,0 +1,13 @@
+{
+  "name":"Basebook2",
+  "description":"Agenda inteligente",
+  "scripts":{},
+  "env":{
+    "JAVA_OPTS":{
+      "required":true
+    }
+  },
+  "addons":[
+    "heroku-postgresql"
+  ]
+}
