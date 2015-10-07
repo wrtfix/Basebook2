@@ -1,0 +1,6 @@
+{
+  "name": "Basebook2",
+  "description": "Agenda electronica digital",
+  "image": "heroku/java",
+  "addons": [ "heroku-postgresql" ]
+}
