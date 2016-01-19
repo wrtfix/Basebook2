@@ -163,9 +163,15 @@
 			!
 			</h5>
 
-			<li class="mt"><a href="index.jsp"> <i
-					class="fa fa-dashboard"></i> <span>Inicio</span>
+			<li class="mt">
+				<a href="index.jsp"> <i class="fa fa-dashboard"></i> <span>Inicio</span></a>
+			</li>
+			
+			<li ><a href="calendar.htm"> <i
+					class="fa fa-dashboard"></i> <span>Calendario</span>
+					
 			</a></li>
+			
 			<!--                  
                   <li class="sub-menu">
                       <a href="javascript:;" >
@@ -185,6 +191,7 @@
 				<ul class="sub">
 					<li><a href="allPersons.htm">Usuarios</a></li>
 					<li><a href="addPerson.htm">Agregar Persona</a></li>
+					<li><a href="settings.htm">Configuración</a></li>
 				</ul></li>
 			<!--<li class="sub-menu">
                       <a class="active" href="javascript:;" >

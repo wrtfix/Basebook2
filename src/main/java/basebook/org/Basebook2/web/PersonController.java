@@ -1,6 +1,9 @@
 package basebook.org.Basebook2.web;
 
+import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import basebook.org.Basebook2.model.Person;
+import basebook.org.Basebook2.model.Turn;
+import basebook.org.Basebook2.model.User;
 
 @Controller
 public class PersonController {
@@ -19,8 +23,14 @@ public class PersonController {
 	private SessionFactory sessionFactory;
 
 	@RequestMapping(value="/addPerson.htm", method=RequestMethod.POST)
-	public ModelAndView addPerson(Person p, Errors errors)
+	public ModelAndView addPerson(User p, Errors errors)
 	{
+		
+		
+		Set<User> persons = new HashSet<User>();
+		persons.add(p);
+		Turn turn = new Turn(new Date(),persons);
+		
 		if (errors.hasErrors())
 		{
 			ModelAndView mav = new ModelAndView("addPerson");
@@ -28,7 +38,7 @@ public class PersonController {
 			return mav;
 		}
 		
-		sessionFactory.getCurrentSession().save(p);	
+		sessionFactory.getCurrentSession().save(turn);	
 		return new ModelAndView("redirect:/allPersons.htm");
 	}
 
@@ -43,8 +53,8 @@ public class PersonController {
 	@RequestMapping("/allPersons.htm")
 	public ModelAndView allPersons()
 	{
-		List<Person> persons = sessionFactory.getCurrentSession().
-			createQuery("FROM Person").list();
+		List<User> persons = sessionFactory.getCurrentSession().
+			createQuery("FROM User").list();
 		
 		ModelAndView mav = new ModelAndView("allPersons");
 		mav.addObject("persons", persons);

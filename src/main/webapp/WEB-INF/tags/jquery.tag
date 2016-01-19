@@ -7,3 +7,7 @@
     <script src="${pageContext.request.contextPath}/js/jquery.nicescroll.js" type="text/javascript"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.backstretch.min.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/js/custom.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/fullcalendar/fullcalendar.min.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/calendar-conf-events.js"></script>
+	
+	

@@ -8,8 +8,7 @@
 </head>
 <body>
 	<mytags:menu />
-	<!-- <h4>New Person</h4> -->
-
+	
 	<section id="main-content">
 		<section class="wrapper site-min-height">
 			<h3>
@@ -26,9 +25,41 @@
 						</c:forEach>
 					</c:if>
 					<form method="post" action="addPerson.htm">
-						<label for="name">Name:</label><input type="text" name="name" /><br />
-						<label for="name">Age:</label><input type="text" name="age" /><br />
-						<input type="submit" /><input type="reset" />
+	                    <table class="table table-bordered table-striped table-condensed">
+	                    <tr>
+	                    	<td data-title="Company">
+	                    		<label for="name">Name</label> 
+	                    	</td>
+	                    	<td data-title="Company">
+	                    		<input type="text" name="name" />
+	                    	</td>
+						</tr><tr>
+							<td data-title="Company">
+								<label for="name">Age</label>
+							</td>
+							<td data-title="Company">
+								<input type="text" name="age" />
+							</td>
+						</tr><tr>
+							<td data-title="Company">
+								<label for="name">User Name</label>
+							</td>
+							<td data-title="Company">
+								<input type="text" name="username" />
+							</td>
+						</tr><tr>
+							<td data-title="Company">
+								<label for="name">Clave</label>
+							</td>
+							<td data-title="Company">
+								<input type="password" name="password" />
+							</td>
+						</tr><tr>
+							<td data-title="Company">
+								<input type="submit" /><input type="reset" />
+							</td>
+						</tr>
+						</table>
 					</form>
 				</div>
 			</div>
