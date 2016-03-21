@@ -124,11 +124,18 @@
 		<!-- DATABASES -->
 		<!-- It is safe to delete (or comment out) dependencies for databases you 
 			do not use. -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.26</version>
+		</dependency>-->
+		
+		<dependency>
+    		<groupId>org.postgresql</groupId>
+    		<artifactId>postgresql</artifactId>
+    		<version>9.3-1101-jdbc41</version>
 		</dependency>
+
 
 
 

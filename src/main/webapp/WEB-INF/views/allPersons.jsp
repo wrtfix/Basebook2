@@ -8,7 +8,15 @@
 </head>
 <body>
 <mytags:menu/>
-<h3>Persons</h3>
+<!-- <h3>Persons</h3> -->
+<section id="main-content">
+		<section class="wrapper site-min-height">
+			<h3>
+				<i class="fa fa-angle-right"></i> Usuarios
+			</h3>
+			<div class="row mt">
+				<div class="col-lg-12">
+
 <c:choose>
 	<c:when test="${fn:length(persons) gt 0}">
 		<table border=1>
@@ -28,7 +36,15 @@
 	</c:when>
 	<c:otherwise>No persons</c:otherwise>
 </c:choose>
-<mytags:footer/>
+		</section>
+		<! --/wrapper -->
+	</section>
+	<!-- /MAIN CONTENT -->
+
+
+	<mytags:footer />
+	</section>
+
 
 </body>
 </html>

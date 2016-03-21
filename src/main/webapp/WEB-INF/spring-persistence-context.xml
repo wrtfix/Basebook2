@@ -17,8 +17,12 @@
        http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
        ">
 
-	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	<!-- <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="location" value="classpath:/mysqldb.properties"/>
+	</bean>-->
+	
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="classpath:/postgres.properties"/>
 	</bean>
 
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
